@@ -652,17 +652,3 @@ section[id] {
     max-width: 100vw;
   }
 }
-/* ===== FIX HERO RESPONSIVE ===== */
-@media (max-width: 900px) {
-  .hero {
-    background-attachment: scroll !important; /* evita el bug de iOS */
-    background-size: cover !important;
-    background-position: center center !important;
-    overflow-x: hidden;
-  }
-
-  html, body {
-    overflow-x: hidden !important;
-  }
-}
-
