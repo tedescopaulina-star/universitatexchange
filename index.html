@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitat Money Exchange</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- HEADER -->
+<header class="main-header">
+  <div class="header-content">
+    <img src="universitat-logo.png" alt="Universitat Logo" class="logo-header" />
+
+    <!-- Botón menú hamburguesa -->
+    <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menú">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <!-- NAV -->
+    <nav class="nav-header" id="nav-menu">
+      <ul>
+        <li><a href="#hero">Inicio</a></li>
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#location">Ubicación</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+
+      <div class="lang-switch">
+        <button onclick="setLang('es')">ES</button>
+        <button onclick="setLang('en')">EN</button>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <h1 id="title">Universitat Money Exchange</h1>
+    <p id="subtitle">Tu casa de cambio de confianza en el centro de Barcelona</p>
+    <p id="description">
+      Ofrecemos el mejor tipo de cambio para tus divisas extranjeras. Atención personalizada, servicio rápido y una tienda cómoda que te invita a quedarte.
+    </p>
+ <div class="cta-buttons">
+   <a href="https://wa.me/34685663634" class="btn primary" target="_blank">WhatsApp</a>
+   <a href="tel:+34685663634" class="btn secondary" id="contact-btn">Contáctanos</a>
+   <a href="https://maps.app.goo.gl/vi2qWdHKL9eZ2Cp18" class="btn tertiary" target="_blank" id="visit-btn">Visítanos</a>
+   </div>
+  </div>
+</section>
+
+
+<!-- SOBRE NOSOTROS -->
+<section class="about" id="about">
+  <h2>Sobre Nosotros</h2>
+  <p class="about-intro">
+    En <strong>Universitat Money Exchange</strong> transformamos el cambio de divisas en una experiencia rápida, segura y sin complicaciones.
+    Nuestra prioridad es ofrecerte siempre el mejor valor por tu dinero, acompañado de un servicio de primera.
+  </p>
+
+  <div class="about-cards">
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/2331/2331942.png" alt="Mejor tipo de cambio" />
+      <h3>Mejores Tipos de Cambio</h3>
+      <p>
+        Ofrecemos cotizaciones actualizadas y competitivas para que obtengas más por tu dinero. 
+        <strong>Sin comisiones ocultas</strong>, sin complicaciones, solo transparencia y valor real.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/1041/1041916.png" alt="Atención personalizada" />
+      <h3>La Mejor Atención</h3>
+      <p>
+        Nuestro equipo te recibe con una sonrisa y te asesora con total cercanía. 
+        <strong>Rápido, amable y confiable</strong>: cambiá divisas en minutos, sin estrés y con total seguridad.
+      </p>
+    </div>
+
+    <div class="card">
+      <img src="https://cdn-icons-png.flaticon.com/512/854/854878.png" alt="Ubicación céntrica" />
+      <h3>Ubicación Céntrica</h3>
+      <p>
+        Estamos en <strong>Gran Vía de les Corts Catalanes 577</strong>, en el corazón de Barcelona. 
+        Fácil de encontrar, rodeados de tiendas, cafés y vida urbana. ¡Ven a visitarnos!
+      </p>
+    </div>
+  </div>
+</section>
+
+  <!-- UBICACIÓN -->
+<section class="location" id="location">
+  <div class="location-info">
+    <h2 id="visit">Visítanos en</h2>
+    <p class="address"><strong>Gran Vía de les Corts Catalanes, 577 - Barcelona</strong></p>
+    <p class="schedule"><strong>Horario:</strong> Lunes a Viernes de 10:00 a 20:00 | Sábados de 11:00 a 19:00</p>
+    <a id="map-link" href="https://maps.app.goo.gl/vi2qWdHKL9eZ2Cp18" target="_blank" class="btn-map">Visítanos</a>
+  </div>
+
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.812590239719!2d2.161098376420262!3d41.38675517130249!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f5e61e3a69%3A0x7a1f3dd77c6b6f77!2sGran%20Via%20de%20les%20Corts%20Catalanes%2C%20577%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1730912345678!5m2!1ses!2ses"
+    width="100%"
+    height="350"
+    style="border:0; border-radius: 12px;"
+    allowfullscreen=""
+    loading="lazy">
+  </iframe>
+</section>
+
+<!-- CONTACTO -->
+<section class="contact" id="contact">
+  <h2>Contacto</h2>
+  <p id="contact-text-1">
+    En <strong>Universitat Money Exchange</strong> estamos siempre disponibles para ayudarte con tus operaciones de cambio.
+    Ya sea que necesites información sobre nuestras divisas, confirmar una tasa de cambio o planificar tu visita,
+    nuestro equipo estará encantado de atenderte con rapidez y amabilidad.
+  </p>
+  <p id="contact-text-2">
+    Podés contactarnos por WhatsApp, llamarnos o venir a conocernos en nuestra tienda en 
+    <strong>Gran Vía de les Corts Catalanes, 577</strong>, en pleno centro de Barcelona.
+  </p>
+
+  <div class="cta-buttons">
+    <a href="https://wa.me/34685663634" class="btn primary" target="_blank">WhatsApp</a>
+    <a href="tel:+34685663634" class="btn secondary">Llamános</a>
+    <a href="https://maps.app.goo.gl/vi2qWdHKL9eZ2Cp18" class="btn tertiary" target="_blank">Visítanos</a>
+  </div>
+</section>
+
+<!-- CARRUSEL DE IMÁGENES -->
+<section class="carousel-section">
+  <h2>Conoce Nuestra Tienda</h2>
+  <div class="carousel-container">
+    <div class="carousel-slide fade">
+      <img src="1137-BON16609.jpg" alt="Interior tienda Universitat" />
+    </div>
+    <div class="carousel-slide fade">
+      <img src="1102-BON16565.jpg" alt="Exterior tienda Universitat" />
+    </div>
+    <div class="carousel-slide fade">
+      <img src="1110-BON16579.jpg" alt="Mostrador Universitat" />
+    </div>
+    <div class="carousel-slide fade">
+      <img src="844-BON16281.jpg" alt="Cartel tienda Universitat" />
+    </div>
+    <div class="carousel-slide fade">
+      <img src="927-BON28738.jpg" alt="Vista calle Universitat" />
+    </div>
+    <div class="carousel-slide fade">
+      <img src="996-BON16420.jpg" alt="Interior tienda Universitat" />
+    </div>
+    <div class="carousel-slide fade">
+      <img src="954-BON28758.jpg" alt="Atención al cliente Universitat" />
+    </div>
+    <div class="carousel-slide fade">
+      <img src="918-BON28726.jpg" alt="Exterior Universitat Money Exchange" />
+    </div>
+    <div class="carousel-slide fade">
+      <img src="123-BON28246.jpg" alt="Zona comercial Universitat" />
+    </div>
+    <div class="carousel-slide fade">
+      <img src="042-BON28124.jpg" alt="Fachada Universitat" />
+    </div>
+
+    <!-- Botones de navegación -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  </div>
+
+  <!-- Indicadores -->
+  <div class="dots-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+    <span class="dot" onclick="currentSlide(9)"></span>
+    <span class="dot" onclick="currentSlide(10)"></span>
+  </div>
+</section>
+
+<!-- PARTNERS -->
+<section class="partners" id="partners">
+  <h2>Partners</h2>
+  <div class="partners-logos">
+    <a href="https://ulock.es/" target="_blank" aria-label="Ulock">
+      <img src="LOGO-ULOCK.png" alt="ULOCK Logo">
+    </a>
+    <a href="https://argentinosenbarcelona.com/" target="_blank" aria-label="Argentinos en Barcelona">
+      <img src="LOGO-ARGENTINOS.png" alt="Argentinos en Barcelona Logo">
+    </a>
+    <a href="https://blocktravelagency.com/" target="_blank" aria-label="BlockTravel">
+      <img src="LOGO-BLOCK.svg" alt="BlockTravel Logo">
+    </a>
+  </div>
+</section>
+
+<script>
+let slideIndex = 0;
+let slideTimer;
+
+function showSlides(n) {
+  const slides = document.getElementsByClassName("carousel-slide");
+  const dots = document.getElementsByClassName("dot");
+  if (n > slides.length) { slideIndex = 1 }
+  if (n < 1) { slideIndex = slides.length }
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
+
+function plusSlides(n) {
+  clearTimeout(slideTimer);
+  showSlides(slideIndex += n);
+  autoSlides();
+}
+
+function currentSlide(n) {
+  clearTimeout(slideTimer);
+  showSlides(slideIndex = n);
+  autoSlides();
+}
+
+function autoSlides() {
+  const slides = document.getElementsByClassName("carousel-slide");
+  const dots = document.getElementsByClassName("dot");
+  for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+  slideIndex++;
+  if (slideIndex > slides.length) slideIndex = 1;
+  for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+  slideTimer = setTimeout(autoSlides, 6000);
+}
+
+autoSlides();
+</script>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.instagram.com/universitatexchange/" target="_blank">Instagram</a>
+      <a href="tel:+34685663634">Teléfono</a>
+    </div>
+    <p>© <span id="year"></span> Universitat Money Exchange</p>
+  </footer>
+<script>
+const content = {
+  es: {
+    nav: ["Inicio", "Nosotros", "Ubicación", "Contacto"],
+    title: 'Universitat Money Exchange',
+    subtitle: 'Tu casa de cambio de confianza en el centro de Barcelona',
+    description: 'Ofrecemos el mejor tipo de cambio para tus divisas extranjeras. Atención personalizada, servicio rápido y una tienda cómoda que te invita a quedarte.',
+    aboutTitle: "Sobre Nosotros",
+    aboutIntro: "En <strong>Universitat Money Exchange</strong> transformamos el cambio de divisas en una experiencia rápida, segura y sin complicaciones. Nuestra prioridad es ofrecerte siempre el mejor valor por tu dinero, acompañado de un servicio de primera.",
+    card1Title: "Mejores Tipos de Cambio",
+    card1Text: "Ofrecemos cotizaciones actualizadas y competitivas para que obtengas más por tu dinero. <strong>Sin comisiones ocultas</strong>, sin complicaciones, solo transparencia y valor real.",
+    card2Title: "La Mejor Atención",
+    card2Text: "Nuestro equipo te recibe con una sonrisa y te asesora con total cercanía. <strong>Rápido, amable y confiable</strong>: cambiá divisas en minutos, sin estrés y con total seguridad.",
+    card3Title: "Ubicación Céntrica",
+    card3Text: "Estamos en <strong>Gran Vía de les Corts Catalanes 577</strong>, en el corazón de Barcelona. Fácil de encontrar, rodeados de tiendas, cafés y vida urbana. ¡Ven a visitarnos!",
+    visit: 'Visítanos en',
+    schedule: '<strong>Horario:</strong> Lunes a Viernes de 10:00 a 20:00 | Sábados de 11:00 a 19:00',
+    map: 'Visítanos',
+    gallery: "Conoce Nuestra Tienda",
+    contactTitle: "Contacto",
+    contactText1: "En <strong>Universitat Money Exchange</strong> estamos siempre disponibles para ayudarte con tus operaciones de cambio. Ya sea que necesites información sobre nuestras divisas, confirmar una tasa de cambio o planificar tu visita, nuestro equipo estará encantado de atenderte con rapidez y amabilidad.",
+    contactText2: "Podés contactarnos por WhatsApp, llamarnos o venir a conocernos en nuestra tienda en <strong>Gran Vía de les Corts Catalanes, 577</strong>, en pleno centro de Barcelona.",
+    contactBtn: "Contáctanos",
+    callBtn: "Llamános",
+    whatsapp: "WhatsApp",
+    visitBtn: "Visítanos",
+    footerPhone: "Teléfono"
+},
+  en: {
+    nav: ["Home", "About Us", "Location", "Contact"],
+    title: 'Universitat Money Exchange',
+    subtitle: 'Your trusted currency exchange in the heart of Barcelona',
+    description: 'We offer the best exchange rates for your foreign currencies. Personalized attention, quick service, and a comfortable store that invites you to stay.',
+    aboutTitle: "About Us",
+    aboutIntro: "At <strong>Universitat Money Exchange</strong>, we make currency exchange a fast, safe, and hassle-free experience. Our goal is to always give you the best value for your money, with first-class service.",
+    card1Title: "Best Exchange Rates",
+    card1Text: "We offer updated and competitive rates so you get more for your money. <strong>No hidden fees</strong>, no complications — only transparency and real value.",
+    card2Title: "Top Customer Service",
+    card2Text: "Our friendly team welcomes you with a smile and helps you every step of the way. <strong>Fast, kind, and reliable</strong>: exchange your money in minutes, stress-free and safely.",
+    card3Title: "Central Location",
+    card3Text: "Located at <strong>Gran Vía de les Corts Catalanes 577</strong>, right in the heart of Barcelona. Easy to find, surrounded by shops, cafés, and the city’s vibrant life. Come visit us!",
+    visit: 'Visit us at',
+    schedule: '<strong>Opening hours:</strong> Monday to Friday from 10:00 to 20:00 | Saturday from 11:00 to 19:00',
+    map: 'Visit us',
+    gallery: "Our Store",
+    contactTitle: "Contact Us",
+    contactText1: "At <strong>Universitat Money Exchange</strong>, we are always available to help you with your currency exchange needs. Whether you need rate information, want to confirm an exchange quote, or plan your visit, our team will be delighted to assist you quickly and kindly.",
+    contactText2: "You can reach us via WhatsApp, give us a call, or visit our store at <strong>Gran Vía de les Corts Catalanes, 577</strong>, in the heart of Barcelona.",
+    contactBtn: "Contact us",
+    callBtn: "Call Us",
+    whatsapp: "WhatsApp",
+    visitBtn: "Visit us",
+    footerPhone: "Phone"
+}
+};
+
+function setLang(lang) {
+  const t = content[lang];
+
+  // NAV
+  const navLinks = document.querySelectorAll(".nav-header ul li a");
+  navLinks.forEach((a, i) => a.textContent = t.nav[i]);
+
+  // HERO
+  document.getElementById('title').textContent = t.title;
+  document.getElementById('subtitle').textContent = t.subtitle;
+  document.getElementById('description').textContent = t.description;
+  document.getElementById('contact-btn').textContent = t.contactBtn;
+  document.querySelector(".hero .btn.primary").textContent = t.whatsapp;
+  document.getElementById('visit-btn').textContent = t.visitBtn;
+
+  // SOBRE NOSOTROS
+  document.querySelector(".about h2").textContent = t.aboutTitle;
+  document.querySelector(".about-intro").innerHTML = t.aboutIntro;
+  const cards = document.querySelectorAll(".about .card");
+  cards[0].querySelector("h3").textContent = t.card1Title;
+  cards[0].querySelector("p").innerHTML = t.card1Text;
+  cards[1].querySelector("h3").textContent = t.card2Title;
+  cards[1].querySelector("p").innerHTML = t.card2Text;
+  cards[2].querySelector("h3").textContent = t.card3Title;
+  cards[2].querySelector("p").innerHTML = t.card3Text;
+
+  // UBICACIÓN
+  document.getElementById('visit').textContent = t.visit;
+  document.querySelector(".schedule").innerHTML = t.schedule;
+  document.getElementById('map-link').textContent = t.map;
+
+  // CARRUSEL
+  document.querySelector(".carousel-section h2").textContent = t.gallery;
+
+  // CONTACTO
+  document.querySelector(".contact h2").textContent = t.contactTitle;
+  document.getElementById("contact-text-1").innerHTML = t.contactText1;
+  document.getElementById("contact-text-2").innerHTML = t.contactText2;
+  document.querySelector(".contact .btn.primary").textContent = t.whatsapp;
+  document.querySelector(".contact .btn.secondary").textContent = t.callBtn;
+  document.querySelector(".contact .btn.tertiary").textContent = t.visitBtn;
+
+
+  // FOOTER
+  document.querySelector("footer a[href^='tel']").textContent = t.footerPhone;
+}
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+// --- MENÚ HAMBURGUESA MÓVIL ---
+const menuToggle = document.getElementById("menu-toggle");
+const navMenu = document.getElementById("nav-menu");
+const navLinks = document.querySelectorAll(".nav-header a");
+
+menuToggle.addEventListener("click", () => {
+  menuToggle.classList.toggle("open");
+  navMenu.classList.toggle("active");
+});
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth <= 900) {
+      navMenu.classList.remove("active");
+      menuToggle.classList.remove("open");
+    }
+  });
+});
+
+// --- EFECTO STICKY HEADER CON SOMBRA ---
+window.addEventListener("scroll", () => {
+  const header = document.querySelector(".main-header");
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+  } else {
+    header.classList.remove("scrolled");
+  }
+});
+
+  window.addEventListener('load', () => {
+    if (!window.location.hash) {
+      window.location.hash = '#hero';
+    }
+  });
+
+</script>
+
+</body>
+</html>
