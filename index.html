@@ -372,7 +372,14 @@ menuToggle.addEventListener("click", () => {
 });
 
 navLinks.forEach(link => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
+    const target = link.getAttribute("href");
+
+    if (target === "#hero" && window.scrollY < 50) {
+      e.preventDefault();
+      return;
+    }
+
     if (window.innerWidth <= 900) {
       navMenu.classList.remove("active");
       menuToggle.classList.remove("open");
@@ -395,6 +402,7 @@ window.addEventListener("scroll", () => {
 
 </body>
 </html>
+
 
 
 
