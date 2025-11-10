@@ -150,7 +150,7 @@ body {
 /* HERO */
 .hero {
   position: relative;
-  background-image: url("105-BON28223.jpg");
+  background-image: url("./105-BON28223.jpg");
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -708,3 +708,4 @@ section[id] {
     max-width: 100vw;
   }
 }
+
