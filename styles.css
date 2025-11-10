@@ -216,34 +216,30 @@ body {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  transition: background 0.3s, transform 0.2s;
+  transition: all 0.3s ease;
 }
 
+/* Colores base */
 .btn.primary {
-  background: #003284;
-  color: white;
+  background-color: #003284;
+  color: #fff;
 }
 
 .btn.secondary {
-  background: #c43a41;
-  color: white;
+  background-color: #c43a41;
+  color: #fff;
+  margin-left: 10px;
+}
+
+.btn.tertiary {
+  background-color: #0097b2;
+  color: #fff;
   margin-left: 10px;
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  background: #1996b8;
-}
-
-.btn.tertiary {
-  background: #1996b8;
-  color: white;
-  margin-left: 10px;
-}
-
-.btn.tertiary:hover {
-  background: #003284;
-  transform: scale(1.05);
+  transform: translateY(-3px);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.2);
 }
 
 /* ===== SECCIÓN CONTACTO ===== */
@@ -714,3 +710,4 @@ section[id] {
     padding: 100px 20px 90px;
   }
 }
+
