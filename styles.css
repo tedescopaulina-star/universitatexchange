@@ -639,7 +639,7 @@ section[id] {
 /* ===== FIX ULTRA SEGURO: eliminar scroll horizontal sin alterar layout ===== */
 @media (max-width: 768px) {
   body {
-    overflow-x: clip; /* en lugar de hidden, evita empujes de layout */
+    overflow-x: clip; 
   }
 
   html {
@@ -708,5 +708,3 @@ section[id] {
     max-width: 100vw;
   }
 }
-
-
