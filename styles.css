@@ -710,17 +710,15 @@ section[id] {
     padding: 100px 20px 90px;
   }
 }
-/* === HERO optimizado para móviles (sin scroll) === */
+/* === HERO compacto === */
 @media (max-width: 768px) {
   .hero {
-    height: 100vh; 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    height: auto;
+    min-height: unset;
+    padding: 100px 20px 60px;
+    background-attachment: scroll;
+    display: block;
     text-align: center;
-    flex-direction: column;
-    background-attachment: scroll; 
-    padding: 0 20px;
   }
 
   .hero-content {
@@ -728,36 +726,35 @@ section[id] {
     margin: 0 auto;
   }
 
-  /* Título y texto más compactos */
   .hero h1 {
-    font-size: 2.2rem;
+    font-size: 2.1rem;
     line-height: 1.2;
     margin-bottom: 10px;
   }
 
-  .hero p {
-    font-size: 1rem;
-    margin-bottom: 15px;
-  }
-
-  /* Menos texto y más aire visual */
   #subtitle {
     font-size: 1rem;
     margin-bottom: 8px;
   }
 
-  /* Botones centrados y visibles siempre */
+  .hero p {
+    font-size: 1rem;
+    margin-bottom: 18px;
+  }
+
+  /* Botones */
   .cta-buttons {
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     gap: 14px;
+    margin-top: 15px;
   }
 
   .btn {
     width: 80%;
-    max-width: 300px;
+    max-width: 320px;
     border-radius: 50px;
     padding: 12px 0;
   }
