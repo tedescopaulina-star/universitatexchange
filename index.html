@@ -406,6 +406,7 @@ window.addEventListener("scroll", () => {
 });
 </script>
 
+
 <script>
 const reviews = [
   { name: "Lucia G", stars: 5, text: "Súper simpáticos, eficientes y amables. Excelente cambio y confiable 100%. Además, el lugar es muy agradable, dan ganas de quedarse 😊" },
@@ -432,14 +433,18 @@ track.innerHTML = allReviews.map(r => `
     <p class="review-author">${r.name}</p>
   </div>
 `).join('');
-</script>
 
+document.addEventListener("DOMContentLoaded", () => {
+  const track = document.querySelector(".reviews-track");
+
+  if (track) {
+
+    const clone = track.innerHTML;
+    track.innerHTML += clone;
+  }
+}); 
+
+</script>
   
 </body>
 </html>
-
-
-
-
-
-
