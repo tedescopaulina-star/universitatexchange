@@ -186,6 +186,7 @@
   </div>
 </section>
 
+
 <!-- REVIEWS -->
 <section class="reviews" id="reviews">
   <h2>Lo que dicen nuestros clientes</h2>
@@ -193,7 +194,8 @@
     <div class="reviews-track" id="reviewsTrack"></div>
   </div>
 </section>
-  
+
+
 <!-- PARTNERS -->
 <section class="partners" id="partners">
   <h2>Partners</h2>
@@ -214,46 +216,74 @@
 let slideIndex = 0;
 let slideTimer;
 
-function showSlides(n) {
+// Mostrar la slide correspondiente
+function showSlides() {
   const slides = document.getElementsByClassName("carousel-slide");
   const dots = document.getElementsByClassName("dot");
-  if (n > slides.length) { slideIndex = 1 }
-  if (n < 1) { slideIndex = slides.length }
+
+  // Ocultar todas
   for (let i = 0; i < slides.length; i++) {
     slides[i].style.display = "none";
+    slides[i].classList.remove("fade");
   }
   for (let i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
+    dots[i].classList.remove("active");
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-}
 
-function plusSlides(n) {
-  clearTimeout(slideTimer);
-  showSlides(slideIndex += n);
-  autoSlides();
-}
-
-function currentSlide(n) {
-  clearTimeout(slideTimer);
-  showSlides(slideIndex = n);
-  autoSlides();
-}
-
-function autoSlides() {
-  const slides = document.getElementsByClassName("carousel-slide");
-  const dots = document.getElementsByClassName("dot");
-  for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+  // Incrementar índice circular
   slideIndex++;
   if (slideIndex > slides.length) slideIndex = 1;
-  for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
+
+  // Mostrar slide actual
   slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
-  slideTimer = setTimeout(autoSlides, 6000);
+  slides[slideIndex - 1].classList.add("fade");
+  dots[slideIndex - 1].classList.add("active");
+
+  // Avanzar automáticamente cada 6 segundos
+  slideTimer = setTimeout(showSlides, 6000);
 }
 
-autoSlides();
+// Botón siguiente / anterior
+function plusSlides(n) {
+  clearTimeout(slideTimer);
+  const slides = document.getElementsByClassName("carousel-slide");
+  slideIndex += n;
+  if (slideIndex > slides.length) slideIndex = 1;
+  if (slideIndex < 1) slideIndex = slides.length;
+  updateSlide();
+}
+
+// Ir a un slide específico
+function currentSlide(n) {
+  clearTimeout(slideTimer);
+  slideIndex = n;
+  updateSlide();
+}
+
+// Actualizar visualización sin interferir con autoplay
+function updateSlide() {
+  const slides = document.getElementsByClassName("carousel-slide");
+  const dots = document.getElementsByClassName("dot");
+
+  for (let i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+    slides[i].classList.remove("fade");
+  }
+  for (let i = 0; i < dots.length; i++) {
+    dots[i].classList.remove("active");
+  }
+
+  slides[slideIndex - 1].style.display = "block";
+  slides[slideIndex - 1].classList.add("fade");
+  dots[slideIndex - 1].classList.add("active");
+
+  // Retomar autoplay tras acción manual
+  slideTimer = setTimeout(showSlides, 6000);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  showSlides();
+});
 </script>
 
   <!-- FOOTER -->
@@ -264,6 +294,7 @@ autoSlides();
     </div>
     <p>© <span id="year"></span> Universitat Money Exchange</p>
   </footer>
+  
 <script>
 const content = {
   es: {
@@ -395,6 +426,7 @@ navLinks.forEach(link => {
   });
 });
 
+
 // --- EFECTO STICKY HEADER CON SOMBRA ---
 window.addEventListener("scroll", () => {
   const header = document.querySelector(".main-header");
@@ -404,8 +436,8 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
-</script>
 
+</script>
 
 <script>
 const reviews = [
@@ -445,6 +477,6 @@ document.addEventListener("DOMContentLoaded", () => {
 }); 
 
 </script>
-  
+
 </body>
 </html>
