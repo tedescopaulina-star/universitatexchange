@@ -186,6 +186,14 @@
   </div>
 </section>
 
+<!-- REVIEWS -->
+<section class="reviews" id="reviews">
+  <h2>Lo que dicen nuestros clientes</h2>
+  <div class="reviews-carousel">
+    <div class="reviews-track" id="reviewsTrack"></div>
+  </div>
+</section>
+  
 <!-- PARTNERS -->
 <section class="partners" id="partners">
   <h2>Partners</h2>
@@ -396,12 +404,40 @@ window.addEventListener("scroll", () => {
     header.classList.remove("scrolled");
   }
 });
-
-
 </script>
 
+<script>
+const reviews = [
+  { name: "Lucia G", stars: 5, text: "Súper simpáticos, eficientes y amables. Excelente cambio y confiable 100%. Además, el lugar es muy agradable, dan ganas de quedarse 😊" },
+  { name: "Yairubt Sánchez", stars: 5, text: "Súper servicio, los chicos súper amables, atención 20/10. Excelente lugar para cambiar dinero. Volveré a venir." },
+  { name: "Nikita Popov", stars: 5, text: "Nice service and good exchange rates. We've checked most places around and nobody were able to compete." },
+  { name: "Johanna Soria", stars: 5, text: "Casa de cambio excelente, el buen trato, la predisposición, el cambio y servicios que ofrecen. ¡Mis preferidos!" },
+  { name: "Melisa Blanco", stars: 5, text: "Excelente atención y cotización! Nos brindaron toda la información necesaria. Lo recomiendo al 100%." },
+  { name: "Erez Baron", stars: 5, text: "Came to change money. Not only that they were extra friendly and nice, they were very professional with great rates. Very trustworthy and professional." },
+  { name: "Cisco G Estrada", stars: 5, text: "La mejor tienda de cambio de BCN. El personal muy amable y te ayudan en todo lo que pueden. ¡La recomiendo 100%!" },
+  { name: "Cecilia Rodriguez", stars: 5, text: "Excelente atención!!! Recomiendo 100%. Todo rápido y súper bien cada vez que voy!" },
+  { name: "Cameron Dighton", stars: 5, text: "Best exchange in the city by far. Friendly team too! 💰" },
+  { name: "Alejandra Ciancio", stars: 5, text: "La atención de los chicos es destacable! 100% profesionales y muy confiables. Voy siempre a operar con ellos." },
+  { name: "Nil", stars: 5, text: "Servicio excelente, un trato muy profesional. La ubicación muy céntrica y tienen las mejores tasas de cambio de la zona. Vuelvo sin duda!" },
+  { name: "Andres Rodriguez", stars: 5, text: "Muy buenas tasas de cambio, y una atención singular! Fueron súper amables, atentos y nos ayudaron en todo momento." }
+];
+
+const allReviews = [...reviews, ...reviews];
+
+const track = document.getElementById("reviewsTrack");
+track.innerHTML = allReviews.map(r => `
+  <div class="review-card">
+    <div class="stars">${"★".repeat(r.stars)}</div>
+    <p class="review-text">"${r.text}"</p>
+    <p class="review-author">${r.name}</p>
+  </div>
+`).join('');
+</script>
+
+  
 </body>
 </html>
+
 
 
 
