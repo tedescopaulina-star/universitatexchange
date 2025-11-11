@@ -851,7 +851,7 @@ section[id] {
   }
 
   .reviews-track {
-    animation: scrollReviews 120s linear infinite;
+    animation: scrollReviews 200s linear infinite;
     gap: 16px;
   }
 
@@ -873,5 +873,6 @@ html, body {
   width: 100%;
   max-width: 100vw;
 }
+
 
 
