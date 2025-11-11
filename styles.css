@@ -438,6 +438,7 @@ section#contact {
 .address strong, .schedule strong {
   color: #c43a41;
 }
+
 /* CARRUSEL */
 .carousel-section {
   text-align: center;
@@ -466,42 +467,63 @@ section#contact {
 
 .carousel-slide img {
   width: 100%;
-  height: 620px; /* Aumentado para mejor visual */
+  height: 620px;
   object-fit: cover;
   border-radius: 18px;
 }
 
-/* Flechas corregidas */
+/* === FLECHAS DEL CARRUSEL (alineadas y funcionales) === */
+.carousel-container {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 18px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
 .prev, .next {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  width: 50px;
-  height: 50px;
-  line-height: 48px;
-  text-align: center;
+  width: 46px;
+  height: 46px;
   border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.45);
+  color: #fff;
   font-weight: bold;
-  font-size: 26px;
-  transition: all 0.3s ease;
-  user-select: none;
-  z-index: 20; 
+  font-size: 28px;
+  text-align: center;
+  line-height: 46px;
   cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+  user-select: none;
 }
 
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+  transform: translateY(-50%) scale(1.1);
+}
+
+/* Flecha izquierda */
 .prev {
   left: 20px;
 }
 
+/* Flecha derecha */
 .next {
   right: 20px;
 }
 
-.prev:hover, .next:hover {
-  background-color: rgba(0, 0, 0, 0.75);
-  transform: translateY(-50%) scale(1.1);
+/* En mobile, un poco más pequeñas */
+@media (max-width: 768px) {
+  .prev, .next {
+    width: 38px;
+    height: 38px;
+    font-size: 24px;
+    line-height: 38px;
+  }
 }
 
 /* Dots (indicadores) */
@@ -527,8 +549,7 @@ section#contact {
 
 /* Transición */
 .fade {
-  animation-name: fade;
-  animation-duration: 1s;
+  animation: fade 1s ease-in-out;
 }
 
 @keyframes fade {
@@ -885,4 +906,3 @@ html, body {
   width: 100%;
   max-width: 100vw;
 }
-
